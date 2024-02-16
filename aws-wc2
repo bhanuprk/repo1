@@ -1,0 +1,12 @@
+provider "aws" {
+  region     = "ap-south-1a"
+  access_key = ""
+  secret_key = ""
+}
+
+resource "aws_instance" "web" {
+  ami            =   "ami-077885f59ecb77b84"
+  instance_type  =   "t2.micro"
+  vpc_id         =	  "vpc-0f04b54b444d62eb3"
+  subnet_id      =   "subnet-00257578d0dd0b748"
+}
