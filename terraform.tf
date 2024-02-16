@@ -1,7 +1,6 @@
 pipeline {
     agent any
 
-    
     stages {
         stage('Checkout') {
             steps {
@@ -20,7 +19,6 @@ pipeline {
          sh 'terraform plan'
         }
     }
-
 
         stage('Terraform Apply') {
             steps {
