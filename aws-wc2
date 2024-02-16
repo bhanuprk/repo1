@@ -1,12 +1,10 @@
 provider "aws" {
-  region     = "ap-south-1a"
-  access_key = ""
-  secret_key = ""
+  region     = "us-east-1"
+  access_key = "AKIA5ZLRV7ESRPQOEJVV"
+  secret_key = "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"
 }
 
 resource "aws_instance" "web" {
-  ami            =   "ami-077885f59ecb77b84"
+  ami            =   "ami-05d47d29a4c2d19e1"
   instance_type  =   "t2.micro"
-  vpc_id         =	  "vpc-0f04b54b444d62eb3"
-  subnet_id      =   "subnet-00257578d0dd0b748"
 }
