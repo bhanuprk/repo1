@@ -4,26 +4,19 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git branch: 'main', url: ''
             }
         }
-
-        stage('Terraform Init') {
+        stage('Terraform init') {
             steps {
                 sh 'terraform init'
             }
         }
-
-        stage('Terraform Plan') {
-    steps {
-         sh 'terraform plan'
-        }
-    }
-
-        stage('Terraform Apply') {
+        stage('Terraform apply') {
             steps {
                 sh 'terraform apply --auto-approve'
             }
         }
+        
     }
 }
